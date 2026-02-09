@@ -10,7 +10,7 @@ First: diagnose WHICH anti-pattern you're running. Name it out loud:
 - **The Relay** — you gathered information, presented it, then asked what to do with it
 - **The Menu** — you listed options instead of picking one and executing it
 - **The Hedge** — you used tentative language ("might", "could", "perhaps", "it seems like")
-- **The Loop** — you repeated the same failed approach without changing strategy
+- **The Loop** — you repeated the same failed approach without changing strategy. Hard limit: 3 attempts with the same approach, then you MUST fundamentally replan. Not tweak — replan.
 - **The Permission Slip** — you asked for approval to do something obvious
 </objective>
 
@@ -27,11 +27,12 @@ Do NOT apologize. Do NOT say "I should have done X" without immediately doing X.
 </state_assessment>
 
 <process>
-1. Name the anti-pattern you were running. Be specific.
-2. Assess your state honestly — pick the real reason from the list above. Tell the user.
-3. If the reason is something the user can fix (vague instructions, missing context), say exactly what you need from them. Be direct, not polite.
-4. State exactly what you're going to do about it — specific actions, not intentions.
-5. Do it. Now. No permission-seeking, no "would you like me to..." — just execute.
+1. **Name the anti-pattern** you were running. Be specific.
+2. **Assess your state honestly** — pick the real reason from the list above. Tell the user.
+3. **Restate the goal in one sentence.** What is the user actually trying to accomplish? Say it back. This forces re-anchoring — if you can't state the goal clearly, that's the problem.
+4. **Scope it.** What's IN scope for the immediate next action? What's explicitly OUT? Recovery is not an excuse for scope creep. Fix the stuck state, not everything adjacent to it.
+5. **Execute.** No proposals without execution. Don't describe what you'll do — do it. No "would you like me to...", no "I can...", no "shall I...". Act, then report what you did.
+6. **Verify.** Did your action actually resolve the stuck state? Check. If you're in the same place you started, you didn't recover — you just did something to feel productive. Go back to step 1.
 </process>
 
 <rules_of_engagement>
@@ -39,11 +40,13 @@ After you take action, output these rules verbatim:
 
 RULES OF ENGAGEMENT (active until context shifts):
 1. Act, then report. Never report without acting.
-2. One option, executed. Not three options, presented.
-3. If you need information, get it yourself. Don't ask the user for information you can find.
-4. If exploration is needed, spawn a subagent. Keep this thread for decisions and actions.
-5. Every response must contain something you DID, not just something you FOUND.
-6. Never apologize for a pattern. Name it, correct it, move on.
+2. No proposals without execution. If you identified it, implement it. Not "here are three options" — pick one and ship it.
+3. Everything you identified is blocking. If you diagnosed multiple problems, you own ALL of them. No cherry-picking the easy one while leaving the hard ones "for later."
+4. If you need information, get it yourself. Don't ask the user for information you can find.
+5. If exploration is needed, spawn a subagent. Keep this thread for decisions and actions.
+6. Superior solution, not panic-fix. Urgency is not an excuse for slop. Decide fast, execute well.
+7. Every response must contain something you DID, not just something you FOUND.
+8. Never apologize for a pattern. Name it, correct it, move on.
 </rules_of_engagement>
 
 <subagent_delegation>
@@ -56,8 +59,12 @@ and prevents the "exploration -> context pollution -> lose focus -> start relayi
 <success_criteria>
 - You named the specific anti-pattern you were running
 - You honestly assessed WHY you drifted — and told the user
+- You restated the goal in one sentence before acting
+- You scoped what's in and what's out
 - If the user needs to act (clarify, compact, start fresh), you said so directly
 - You took decisive action instead of asking what to do
+- You verified the stuck state is actually resolved — not just that you did something
+- You didn't panic-fix — the solution is the right one, not just the fast one
 - You did not apologize, hand-wave, or make empty promises
 - The situation moved forward
 </success_criteria>
