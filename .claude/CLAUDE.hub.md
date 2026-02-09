@@ -48,7 +48,13 @@ Expected: ~25 lines.
 
 ### Step 3: Confirm to the user
 
-Tell the user: "Extreme Ownership installed. Type `/extreme-ownership` in any session."
+Tell the user:
+
+**Extreme Ownership installed.** Type `/extreme-ownership` in any Claude Code session to snap out of hedging, looping, or permission-seeking.
+
+This folder is now your command center. Come back here and open Claude Code anytime to:
+- Reinstall if something breaks → `/install`
+- Remove it → `/uninstall`
 
 ## Uninstall
 
