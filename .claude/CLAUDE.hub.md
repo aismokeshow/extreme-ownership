@@ -16,7 +16,7 @@ The instructions below tell Claude Code how to manage everything. You can read a
 
 | File | What it does |
 |---|---|
-| `extreme-ownership.md` | The skill file — 24 lines that snap Claude out of hedging |
+| `extreme-ownership.md` | The skill file — ~55 lines that diagnose anti-patterns and enforce ownership |
 | `.claude/commands/install.md` | Slash command dispatcher for `/install` |
 | `.claude/commands/uninstall.md` | Slash command dispatcher for `/uninstall` |
 
@@ -44,7 +44,7 @@ cp extreme-ownership.md ~/.claude/commands/extreme-ownership.md
 wc -l ~/.claude/commands/extreme-ownership.md
 ```
 
-Expected: ~25 lines.
+Expected: ~55 lines.
 
 ### Step 3: Confirm to the user
 

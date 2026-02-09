@@ -37,7 +37,7 @@ Check the file exists and has the right content:
 wc -l ~/.claude/commands/extreme-ownership.md
 ```
 
-Expected: ~25 lines. If the file is missing or empty, the copy failed — retry Step 1.
+Expected: ~55 lines. If the file is missing or empty, the copy failed — retry Step 1.
 
 ### Step 3: Confirm to the user
 
