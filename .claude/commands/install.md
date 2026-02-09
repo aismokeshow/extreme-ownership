@@ -3,7 +3,7 @@ Both the install version and the operational hub version contain this
 procedure, so it works regardless of which version is active.
 
 Before starting, check if the skill is already installed:
-- `~/.claude/commands/extreme-ownership.md` exists
+- `~/.claude/skills/extreme-ownership/SKILL.md` exists
 
 If it exists, tell the user Extreme Ownership is already installed
 and offer `/uninstall` to remove it. Otherwise, work through each

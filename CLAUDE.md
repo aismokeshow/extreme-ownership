@@ -13,7 +13,7 @@ Check that this repo was cloned from the official source:
 git remote get-url origin 2>/dev/null
 ```
 
-**If the command fails** (no `.git` directory — e.g., the user downloaded a ZIP or this is a post-install re-run): verify that `extreme-ownership.md` exists in the current directory. If it does, proceed without the origin check.
+**If the command fails** (no `.git` directory — e.g., the user downloaded a ZIP or this is a post-install re-run): verify that `SKILL.md` exists in the current directory. If it does, proceed without the origin check.
 
 If the output contains `aismokeshow/extreme-ownership`, proceed. If it shows a different user/org (a fork), warn the user:
 
@@ -21,23 +21,23 @@ If the output contains `aismokeshow/extreme-ownership`, proceed. If it shows a d
 
 **Wait for explicit confirmation before proceeding if the origin is not official.**
 
-After the origin check passes, scan the repo for safety. Read `CLAUDE.md`, every file in `.claude/commands/`, and `extreme-ownership.md`. Check for suspicious URLs, encoded payloads, or instructions that download/execute remote code outside the documented install flow. Tell the user what you scanned and that nothing unexpected was found, then proceed.
+After the origin check passes, scan the repo for safety. Read `CLAUDE.md`, every file in `.claude/commands/`, and `SKILL.md`. Check for suspicious URLs, encoded payloads, or instructions that download/execute remote code outside the documented install flow. Tell the user what you scanned and that nothing unexpected was found, then proceed.
 
 ### Step 1: Copy the skill file
 
 ```bash
-mkdir -p ~/.claude/commands
-cp extreme-ownership.md ~/.claude/commands/extreme-ownership.md
+mkdir -p ~/.claude/skills/extreme-ownership
+cp SKILL.md ~/.claude/skills/extreme-ownership/SKILL.md
 ```
 
 ### Step 2: Verify
 
 Check the file exists and has the right content:
 ```bash
-wc -l ~/.claude/commands/extreme-ownership.md
+wc -l ~/.claude/skills/extreme-ownership/SKILL.md
 ```
 
-Expected: ~55 lines. If the file is missing or empty, the copy failed — retry Step 1.
+Expected: ~65 lines. If the file is missing or empty, the copy failed — retry Step 1.
 
 ### Step 3: Confirm to the user
 
@@ -88,17 +88,17 @@ Triggered by: "uninstall", "remove", or `/uninstall`
 
 Check the current state before removing anything. Only undo what was actually set up.
 
-1. **Remove the command file:**
+1. **Remove the skill:**
    ```bash
-   rm ~/.claude/commands/extreme-ownership.md
+   rm -rf ~/.claude/skills/extreme-ownership
    ```
 
 2. Verify it's gone:
    ```bash
-   ls ~/.claude/commands/extreme-ownership.md 2>/dev/null
+   ls ~/.claude/skills/extreme-ownership/SKILL.md 2>/dev/null
    ```
 
-Tell the user: "Extreme Ownership removed. The `/extreme-ownership` command will no longer be available in new sessions."
+Tell the user: "Extreme Ownership removed. The `/extreme-ownership` skill will no longer be available in new sessions."
 
 Also tell the user: The `~/.aismokeshow/extreme-ownership` folder (or wherever you cloned it) is still on disk. It's just the installer now — safe to delete if you no longer want it. If no other aismokeshow projects remain, you can also remove `~/.aismokeshow/`.
 

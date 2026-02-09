@@ -8,7 +8,7 @@ The instructions below tell Claude Code how to manage everything. You can read a
 
 ## How This Works
 
-- `~/.claude/commands/extreme-ownership.md` is the live skill file
+- `~/.claude/skills/extreme-ownership/SKILL.md` is the installed skill
 - Claude Code picks it up automatically — no config changes needed
 - Type `/extreme-ownership` in any session to activate it
 
@@ -16,7 +16,7 @@ The instructions below tell Claude Code how to manage everything. You can read a
 
 | File | What it does |
 |---|---|
-| `extreme-ownership.md` | The skill file — ~55 lines that diagnose anti-patterns and enforce ownership |
+| `SKILL.md` | The skill — ~65 lines that diagnose anti-patterns and enforce ownership |
 | `.claude/commands/install.md` | Slash command dispatcher for `/install` |
 | `.claude/commands/uninstall.md` | Slash command dispatcher for `/uninstall` |
 
@@ -34,17 +34,17 @@ When you type `/extreme-ownership`, Claude Code will:
 ### Step 1: Copy the skill file
 
 ```bash
-mkdir -p ~/.claude/commands
-cp extreme-ownership.md ~/.claude/commands/extreme-ownership.md
+mkdir -p ~/.claude/skills/extreme-ownership
+cp SKILL.md ~/.claude/skills/extreme-ownership/SKILL.md
 ```
 
 ### Step 2: Verify
 
 ```bash
-wc -l ~/.claude/commands/extreme-ownership.md
+wc -l ~/.claude/skills/extreme-ownership/SKILL.md
 ```
 
-Expected: ~55 lines.
+Expected: ~65 lines.
 
 ### Step 3: Confirm to the user
 
@@ -62,16 +62,16 @@ Triggered by: "uninstall", "remove", or `/uninstall`
 
 Check the current state before removing anything. Only undo what was actually set up.
 
-1. **Remove the command file:**
+1. **Remove the skill:**
    ```bash
-   rm ~/.claude/commands/extreme-ownership.md
+   rm -rf ~/.claude/skills/extreme-ownership
    ```
 
 2. Verify it's gone:
    ```bash
-   ls ~/.claude/commands/extreme-ownership.md 2>/dev/null
+   ls ~/.claude/skills/extreme-ownership/SKILL.md 2>/dev/null
    ```
 
-Tell the user: "Extreme Ownership removed. The `/extreme-ownership` command will no longer be available in new sessions."
+Tell the user: "Extreme Ownership removed. The `/extreme-ownership` skill will no longer be available in new sessions."
 
 Also tell the user: The `~/.aismokeshow/extreme-ownership` folder is still on disk — safe to delete if you no longer want it. If no other aismokeshow projects remain, you can also remove `~/.aismokeshow/`.
