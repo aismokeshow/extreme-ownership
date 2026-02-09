@@ -78,7 +78,7 @@ Your Claude Code snap-out-of-it command lives here. Open Claude Code in this fol
 
 `/install` · `/uninstall`
 
-MIT — based on [extreme-ownership](https://github.com/aismokeshow/extreme-ownership) by aismokeshow
+MIT — [aismokeshow](https://www.aismokeshow.com/) · [extreme-ownership](https://github.com/aismokeshow/extreme-ownership)
 EOF
 ```
 
