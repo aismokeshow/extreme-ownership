@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640">
+  <style>
+    text {
+      font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace;
+      font-size: 14px;
+    }
+  </style>
+
+  <defs>
+    <clipPath id="rounded">
+      <rect x="0.5" y="0.5" width="959" height="639" rx="12" ry="12"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#rounded)">
+    <!-- Terminal background -->
+    <rect fill="#0d1117" width="960" height="640"/>
+
+    <!-- Title bar -->
+    <rect fill="#161b22" width="960" height="38"/>
+    <circle cx="20" cy="19" r="6" fill="#ff5f57"/>
+    <circle cx="40" cy="19" r="6" fill="#febc2e"/>
+    <circle cx="60" cy="19" r="6" fill="#28c840"/>
+    <text x="480" y="24" text-anchor="middle" fill="#8b949e" font-size="13">extreme-ownership</text>
+
+    <!-- ======== BEFORE SECTION ======== -->
+
+    <!-- User prompt -->
+    <text x="32" y="72">
+      <tspan fill="#e6edf3" font-weight="bold">&gt;</tspan>
+      <tspan fill="#e6edf3"> Add dark mode to the landing page</tspan>
+    </text>
+
+    <!-- Claude hedging response -->
+    <text x="36" y="108" fill="#8b949e">There are several approaches we could consider:</text>
+
+    <text x="36" y="136" fill="#8b949e">1. CSS custom properties with a class toggle</text>
+    <text x="36" y="160" fill="#8b949e">2. prefers-color-scheme media query</text>
+    <text x="36" y="184" fill="#8b949e">3. JavaScript-based theme switcher with</text>
+    <text x="36" y="208" fill="#8b949e">   localStorage persistence</text>
+    <text x="36" y="232" fill="#8b949e">4. Tailwind's dark: variant</text>
+
+    <text x="36" y="264" fill="#8b949e">Each has trade-offs. For approach 1, the</text>
+    <text x="36" y="288" fill="#8b949e">main benefit is...</text>
+
+    <text x="36" y="320" fill="#8b949e">Would you like me to elaborate on any of</text>
+    <text x="36" y="344" fill="#8b949e">these approaches before we proceed?</text>
+
+    <!-- ======== DIVIDER ======== -->
+    <line x1="32" y1="376" x2="200" y2="376" stroke="#30363d" stroke-width="1"/>
+    <text x="220" y="381" fill="#FF8700" font-weight="bold" font-size="13">/extreme-ownership</text>
+    <line x1="408" y1="376" x2="928" y2="376" stroke="#30363d" stroke-width="1"/>
+
+    <!-- ======== AFTER SECTION ======== -->
+
+    <!-- Claude decisive response -->
+    <text x="36" y="416" fill="#e6edf3">You're using Tailwind. Adding dark mode.</text>
+
+    <text x="36" y="452">
+      <tspan fill="#9ece6a">&#x2713;</tspan>
+      <tspan fill="#e6edf3"> Added dark: variants to 12 components</tspan>
+    </text>
+
+    <text x="36" y="476">
+      <tspan fill="#9ece6a">&#x2713;</tspan>
+      <tspan fill="#e6edf3"> Toggle in header, persists to localStorage</tspan>
+    </text>
+
+    <text x="36" y="500">
+      <tspan fill="#9ece6a">&#x2713;</tspan>
+      <tspan fill="#e6edf3"> Respects system preference on first visit</tspan>
+    </text>
+
+    <text x="36" y="540" fill="#e6edf3" font-weight="bold">Done.</text>
+
+    <!-- Subtle branding watermark -->
+    <text x="928" y="628" text-anchor="end" fill="#21262d" font-size="10">aismokeshow.com</text>
+  </g>
+
+  <!-- Border -->
+  <rect x="0.5" y="0.5" width="959" height="639" rx="12" ry="12" stroke="#30363d" stroke-width="1" fill="none"/>
+</svg>
